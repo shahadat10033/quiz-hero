@@ -25,5 +25,59 @@
         >
       </nav>
     </header>
+    <main class="container mx-auto px-4 my-10">
+      <section>
+        <p>
+          Q-1. What is difference among map, filter, forEach and find method??
+        </p>
+        <br />
+        <p>
+          forEach method is used to execute the same code on every element in an
+          array but does not change the array and it returns undefined. <br />
+          map method is used to executes the same code on every element in an
+          array and returns a new array with the updated elements. <br />
+          filter method checks every element in an array to see if it meets a
+          certain criteria and returns a new array with the elements that return
+          truthy for the criteria. <br />
+          find returns the value of the first element that passes a test and
+          returns undefined if no elements are found.
+        </p>
+        <br />
+      </section>
+      <section>
+        <p>
+          Q-2. What is difference among Local storage,Session storage and
+          Cookies??
+        </p>
+        <br />
+        <p>
+          Session storage stores a larger amount of data on the client's
+          computer only for the current session, expiring the data on tab close.
+          Data is never transferred to the server and is accessible client-side
+          from the same tab. <br />
+          Local storage stores a larger amount of data on the client's computer
+          in a key-value pair format and has no expiration date. Data is never
+          transferred to the server. <br />
+          Cookies store small amounts of data that has to be sent back to the
+          server with subsequent requests and their expiration can be set from
+          either server or client.
+        </p>
+        <br />
+      </section>
+      <section>
+        <p>Q-3. What is Event loop? and how it works??</p>
+        <br />
+        <p>
+          Event loop is what allows javascript to handle thousands and thousands
+          of requests with just a single thread. It monitor the Call Stack and
+          the Callback Queue. Event loop is a process that waits for the Call
+          Stack to be clear before pushing callbacks from the Task Queue to the
+          Call Stack. Once the Stack is clear, the event loop triggers and
+          checks the Task Queue for available callbacks. If there are any, it
+          pushes it to the Call Stack, waits for the Call Stack to be clear
+          again, and repeats the same process.
+        </p>
+      </section>
+    </main>
   </body>
 </html>
