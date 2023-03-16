@@ -49,7 +49,6 @@ const loadQuiz = async () => {
   const data = await res.json();
   quizData = data;
   displayQuiz(data);
-  console.log(data);
 };
 
 // Displaying quiz on quiz page
@@ -110,6 +109,7 @@ document.querySelector("#submit").addEventListener("click", () => {
 
   // data setting on local storage and getting data from local storage
   let storage = JSON.parse(localStorage.getItem("results"));
+
   if (storage) {
     localStorage.setItem(
       "results",
@@ -120,10 +120,11 @@ document.querySelector("#submit").addEventListener("click", () => {
           examTime: timeTaken.innerText,
           status: grade.status,
         },
-        console.log(...storage),
       ])
     );
   } else {
+    console.log("insideelse");
+
     localStorage.setItem(
       "results",
       JSON.stringify([
@@ -168,7 +169,8 @@ document.querySelector("#submit").addEventListener("click", () => {
     ${storage
       ?.reverse()
       ?.map(
-        (item) => `<div
+        (item) =>
+          `<div
       class="flex justify-between items-center border rounded p-2 my-2 shadow-sm">
       <div>${item.marks}/60</div>
       <div>${item.status}</div>
